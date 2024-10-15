@@ -1,10 +1,10 @@
 package tn.esprit.gestionzoo.entities ;
 public class Animal {
-    private String family;
-    private String name;
-    private int age;
-    private boolean isMammal;
-
+    protected String family;
+    protected String name;
+    protected int age;
+    protected boolean isMammal;
+    public Animal(){};
     public Animal (String family ,String name ,int age , boolean isMammal)
     {this.family=family;
         this.name=name;
@@ -36,6 +36,13 @@ public class Animal {
 
     public String getDetails() {
         return "Animal: " + name + ", Family: " + family + ", Age: " + age + ", Mammal: " + isMammal;
+    }
+    @Override
+    public String toString() {
+        return "Animal [Family=" + family +
+                ", Name=" + name +
+                ", Age=" + age +
+                ", Mammal=" + isMammal + "]";
     }
 
 }
